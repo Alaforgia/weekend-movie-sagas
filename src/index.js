@@ -28,6 +28,12 @@ function* fetchAllMovies() {
     }
         
 }
+// Get Details Saga for Details page when movie is clicked
+// function* getDetails() {
+//     try{
+//         const movieDetails = yield axios.get()
+//     }
+// }
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
