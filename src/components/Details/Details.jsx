@@ -17,7 +17,6 @@ function Details() {
     <>
       <h1>Movie Details</h1>
       <div>
-        {movieDetailList.map()}
         <MovieList />
         {/* <button onClick={}>Back to Movies</button> */}
       </div>
