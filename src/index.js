@@ -32,10 +32,10 @@ function* getDetails(action) {
   console.log("Action Payload = ", action.payload);
   try {
     console.log("Before");
-    const genre = yield axios.get("/api/genre/" + action.payload);
+    const genres = yield axios.get(`/api/genre/'${action.payload}'`);
     console.log("after");
-    console.log("get details:", genre.data);
-    yield put({ type: "SET_GENRES", payload: genre.data });
+    console.log("get details:", genres.data);
+    yield put({ type: "SET_GENRES", payload: genres.data });
   } catch {
     console.log("get details error");
   }

@@ -4,20 +4,20 @@ import { useEffect } from "react";
 import MovieList from "../MovieList/MovieList";
 
 function Details() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch({ type: "FETCH_MOVIES" });
-  }, []);
+  // useEffect(() => {
+  //   dispatch({ type: "GET_DETAILS" });
+  // }, []);
 
-  const movieDetailList = useSelector((store) => store.genre);
+  const movieDetailList = useSelector((store) => store.genres);
 
   // {movieDetailList.map(({list}))}
   return (
     <>
       <h1>Movie Details</h1>
       <div>
-        <MovieList />
+        <MovieList {...movieDetailList} />
         {/* <button onClick={}>Back to Movies</button> */}
       </div>
     </>
