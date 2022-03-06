@@ -17,7 +17,13 @@ function Details() {
     <>
       <h1>Movie Details</h1>
       <div>
-        <MovieList {...movieDetailList} />
+        <img src={movieDetailList[0].poster} />
+        <h2>{movieDetailList[0].title}</h2>
+        <p>{movieDetailList[0].description}</p>
+        {movieDetailList.map((movie) => {
+          return <div>{movie.name}</div>;
+        })}
+        {/* {movieDetailList} */}
         {/* <button onClick={}>Back to Movies</button> */}
       </div>
     </>
