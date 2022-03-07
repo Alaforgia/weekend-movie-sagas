@@ -18,7 +18,7 @@ function MovieList() {
 
   return (
     <main class="h-screen bg-black">
-      <h1 class=" text-4x1 py-6 font-bold underline ext-base leading-normal text-gray-500 dark:text-white mt-2 pt-5">
+      <h1 class=" text-2xl py-6 font-bold underline ext-base leading-normal text-gray-500 dark:text-white pt-5 font-oswald">
         Movie List
       </h1>
       <section className="movies" class=" bg-black items-center justify-center grid grid-cols-4 gap-2 px-16">
@@ -34,11 +34,7 @@ function MovieList() {
               <h3 class="pb-3 font-bold font-sans pt-5 ext-base leading-normal text-gray-500 dark:text-white">
                 {movie.title}
               </h3>
-              <img
-                class=" flex-wrap pb-8 outline-black mx-auto"
-                src={movie.poster}
-                alt={movie.title}
-              />
+              <img class=" flex-wrap pb-8 outline-black mx-auto" src={movie.poster} alt={movie.title} />
             </div>
           );
         })}
