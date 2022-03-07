@@ -17,9 +17,9 @@ function MovieList() {
   };
 
   return (
-    <main class="bg-blue-300">
-      <h1 class="text-4x1 py-6 font-bold underline bg-blue-300 pt-5">Movie List</h1>
-      <section className="movies">
+    <main class="h-screen bg-black">
+      <h1 class=" text-4x1 py-6 font-bold underline ext-base leading-normal text-gray-500 dark:text-white mt-2 pt-5">Movie List</h1>
+      <section className="movies" class=" bg-black items-center justify-center grid grid-cols-6 gap-2 px-16">
         {movies.map((movie) => {
           return (
             <div
@@ -28,8 +28,12 @@ function MovieList() {
               }}
               key={movie.id}
             >
-              <h3 class="font-bold font-sans pt-5 ">{movie.title}</h3>
-              <img class="flex-wrap py-4 pl-20 cursor-pointer outline-black " src={movie.poster} alt={movie.title} />
+              <h3 class="font-bold font-sans pt-5 ext-base leading-normal text-gray-500 dark:text-white">{movie.title}</h3>
+              <img
+                class=" flex-wrap pb-8 pl-9 cursor-pointer outline-black hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100 "
+                src={movie.poster}
+                alt={movie.title}
+              />
             </div>
           );
         })}
