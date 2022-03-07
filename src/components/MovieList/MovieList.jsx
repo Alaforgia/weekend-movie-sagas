@@ -17,8 +17,8 @@ function MovieList() {
   };
 
   return (
-    <main>
-      <h1>MovieList</h1>
+    <main class="bg-blue-300">
+      <h1 class="text-4x1 py-6 font-bold underline bg-blue-300 pt-5">Movie List</h1>
       <section className="movies">
         {movies.map((movie) => {
           return (
@@ -28,8 +28,8 @@ function MovieList() {
               }}
               key={movie.id}
             >
-              <h3>{movie.title}</h3>
-              <img src={movie.poster} alt={movie.title} />
+              <h3 class="font-bold font-sans pt-5 ">{movie.title}</h3>
+              <img class="flex-wrap py-4 pl-20 cursor-pointer outline-black " src={movie.poster} alt={movie.title} />
             </div>
           );
         })}
